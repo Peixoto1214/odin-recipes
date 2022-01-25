@@ -1,6 +1,8 @@
 body{
     background: url(./background-texture.jpg);
     font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 0;
     }
 .foodpics{
     width: 200px; 
@@ -51,4 +53,54 @@ img {
 .prep{
     text-align: center;
     padding: 5px;
+}
+ul{
+    list-style-type: none;
+}
+.navbar{
+    display: inline-block;
+    position: absolute;
+}
+.navbar li:hover{
+    background: #fff;
+}
+.navbar > ul{
+    display: inline-block;
+}
+.navbar > ul > li {
+    position: relative;
+    cursor: pointer;
+    float: left;
+    padding: 10px;
+}
+.dropdown{
+    position: absolute;
+}
+.dropdown li{
+    background: #313131;
+    display: none;
+}
+.dropdown li:hover{
+    
+}
+.navbar li:hover > .dropdown{
+    perspective: 50px;
+
+}
+.navbar li:hover > .dropdown li{
+    transform-origin: top center;
+
+}
+.navbar li:hover > .dropdown li:nth-child(1){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: -150ms;
+}
+.navbar li:hover > .dropdown li:nth-child(2){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 0ms;
+}
+@keyframes animate {
+    {   opacity: 0;
+        transform: translateX(-100px)
+    }
 }
